@@ -5,7 +5,7 @@ Just an easy to use PHP class for getting anime information from MyAnimeList.
 Just include it in the PHP file where you want to use it and supply the MyAnimeList ID (from URL)
 ```php
 //include or require
-include('myanimelist-scraper.php');
+include('malClass.php');
 
 //get Gintama information
 $stmt = new MyAnimeListHandler(918);
