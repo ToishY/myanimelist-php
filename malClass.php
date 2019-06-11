@@ -26,7 +26,7 @@ class MyAnimeListHandler{
 	function getShowInfo(){
 		return array('name'=>$this->showName(),
 			        'alternative_titles'=>$this->showAlternativeTitles(),
-					'slug'=>$this->slug,
+				'slug'=>$this->slug,
 			        'description'=>$this->showDescription(),
 			        'img_main'=>$this->showThumbnail(),
 			        'img_other'=>$this->showPictures(),
