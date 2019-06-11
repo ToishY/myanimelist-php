@@ -28,19 +28,20 @@ class MyAnimeListHandler{
 			        'alternative_titles'=>$this->showAlternativeTitles(),
 					'slug'=>$this->slug,
 			        'description'=>$this->showDescription(),
-			        'thumbnail'=>$this->showThumbnail(),
-			        'pics'=>$this->showPictures(),
+			        'img_main'=>$this->showThumbnail(),
+			        'img_other'=>$this->showPictures(),
 			        'tags'=>$this->showTags(),
 			        'type'=>$this->showType(),
 			        'rating'=>$this->showRating(),
 			        'age'=>$this->showAgeRestriction(),
 			        'status'=>$this->showStatus(),
 			        'airdate'=>$this->showAirDate(),
+			        'pv_main'=>$this->showMainPromotionalVideo(),
+			        'pv_other'=>$this->showPromotionalVideos(),
 			        'eps_dur'=>$this->showEpisodeDuration(),
 			        'eps_count'=>$this->showEpisodeCount(),
 			        'eps_names'=>$this->episodeTitles(),
-			        'eps_dur'=>$this->showEpisodeDuration(),
-			        'pv'=>$this->showPromotionalVideo());
+			        'eps_dur'=>$this->showEpisodeDuration());
 	}
 
 	private function showName(){
@@ -121,9 +122,15 @@ class MyAnimeListHandler{
 		return array_combine($matches[1],$matches[2]);
 	}
 
-	private function showPromotionalVideo(){
+	private function showMainPromotionalVideo(){
 		preg_match('/https:\/\/www.youtube.com\/embed\/(.{1,11})/', $this->show, $match);
 		return (!empty($match[1]) ? $match[1] : NULL);
+	}
+
+	private function showPromotionalVideos(){
+		$pvslug = 'https://'. self::MAL_URL .'/anime/' . $this->mid . '/' . $this->slug . '/video';
+		preg_match_all('/https:\/\/www.youtube.com\/embed\/(.{1,11}).*<span class="title">(.*)<\/span><\/div>/', file_get_contents( $pvslug ), $matches);
+		return array_values( array_diff( $matches[1], array( $this->showMainPromotionalVideo() ) ) );
 	}
 
 	private function showSlug(){
