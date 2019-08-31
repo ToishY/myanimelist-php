@@ -83,7 +83,7 @@ class MyAnimeListHandler{
 		*/
 		$pslug = 'https://'. self::MAL_URL .'/anime/' . $this->mid . '/' . $this->slug . '/pics';
 		preg_match_all('/rel="gallery-anime"><img src="https:\/\/' . self::MAL_CDN . '.' . self::MAL_URL . '\/images\/anime\/(.*)" alt=/', file_get_contents($pslug), $matches);
-		return array_values( array_diff( $matches[1], array( $this->showThumbnail() ) ) );
+		return $matches[1];
 	}
 
 	public function showAllPromotionalVideos(){
