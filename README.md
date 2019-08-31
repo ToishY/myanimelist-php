@@ -280,6 +280,14 @@ $char = $stmt->getCharacters();
 print_r($char);
 ```
 
+Or provide with 'slug' directly:
+
+```php
+$stmt = new MyAnimeListHandler(918, 'Gintama');
+$char = $stmt->getCharacters();
+print_r($char);
+```
+
 The result:
 
 ```
