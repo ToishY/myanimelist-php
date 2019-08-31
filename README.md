@@ -304,17 +304,12 @@ Array
                     [importance] => 0
                 )
 
-            [0] => Array
+            [voice_actor] => Array
                 (
-                    [voice_actor] => Array
-                        (
-                            [id] => 8
-                            [slug] => Rie_Kugimiya
-                            [name] => Kugimiya, Rie
-                        )
-
+                    [id] => 8
+                    [slug] => Rie_Kugimiya
+                    [name] => Kugimiya, Rie
                 )
-
         )
 
     [1] => Array
@@ -328,17 +323,12 @@ Array
                     [importance] => 1
                 )
 
-            [0] => Array
+            [voice_actor] => Array
                 (
-                    [voice_actor] => Array
-                        (
-                            [id] => 2
-                            [slug] => Tomokazu_Sugita
-                            [name] => Sugita, Tomokazu
-                        )
-
+                    [id] => 2
+                    [slug] => Tomokazu_Sugita
+                    [name] => Sugita, Tomokazu
                 )
-
         )
 
     [2] => Array
@@ -351,18 +341,13 @@ Array
                     [role] => Main
                     [importance] => 2
                 )
-
-            [0] => Array
+                
+             [voice_actor] => Array
                 (
-                    [voice_actor] => Array
-                        (
-                            [id] => 278
-                            [slug] => Daisuke_Sakaguchi
-                            [name] => Sakaguchi, Daisuke
-                        )
-
+                    [id] => 278
+                    [slug] => Daisuke_Sakaguchi
+                    [name] => Sakaguchi, Daisuke
                 )
-
         )
   )
 ```
