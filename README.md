@@ -271,3 +271,90 @@ Array
     [pv] => 
 )
 ```
+
+Also, it's possible to get the characters with corresponding Japanese VAs like so:
+```php
+$stmt = new MyAnimeListHandler(918);
+$res = $stmt->getShowInfo();
+$char = $stmt->getCharacters();
+print_r($char);
+```
+
+The result:
+
+```
+Array
+(
+    [0] => Array
+        (
+            [character] => Array
+                (
+                    [id] => 674
+                    [slug] => Kagura
+                    [name] => Kagura
+                    [role] => Main
+                    [importance] => 0
+                )
+
+            [0] => Array
+                (
+                    [voice_actor] => Array
+                        (
+                            [id] => 8
+                            [slug] => Rie_Kugimiya
+                            [name] => Kugimiya, Rie
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [character] => Array
+                (
+                    [id] => 672
+                    [slug] => Gintoki_Sakata
+                    [name] => Sakata, Gintoki
+                    [role] => Main
+                    [importance] => 1
+                )
+
+            [0] => Array
+                (
+                    [voice_actor] => Array
+                        (
+                            [id] => 2
+                            [slug] => Tomokazu_Sugita
+                            [name] => Sugita, Tomokazu
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [character] => Array
+                (
+                    [id] => 673
+                    [slug] => Shinpachi_Shimura
+                    [name] => Shimura, Shinpachi
+                    [role] => Main
+                    [importance] => 2
+                )
+
+            [0] => Array
+                (
+                    [voice_actor] => Array
+                        (
+                            [id] => 278
+                            [slug] => Daisuke_Sakaguchi
+                            [name] => Sakaguchi, Daisuke
+                        )
+
+                )
+
+        )
+  )
+```
