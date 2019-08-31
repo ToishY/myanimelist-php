@@ -72,7 +72,7 @@ class MyAnimeListHandler{
 				preg_match('/<a href="https:\/\/myanimelist.net\/people\/(\d{1,20})\/([A-Za-z-_]+?)">([^<>]+?)<\/a><br>[\s+]?<small>Japanese<\/small>/',$cmatches[1], $fmatches);
 				$va = ['voice_actor'=>['id'=>$fmatches[1], 'slug'=>$fmatches[2], 'name'=>trim($fmatches[3])]];
 			}
-			$nar[] = ['character'=>['id'=>$matches[0][$i], 'slug'=>$matches[1][$i], 'name'=>trim($matches[2][$i]), 'role'=>$matches[3][$i], 'importance'=>$i], $va];
+			$nar[] = array_merge( ['character'=>['id'=>$matches[0][$i], 'slug'=>$matches[1][$i], 'name'=>trim($matches[2][$i]), 'role'=>$matches[3][$i], 'importance'=>$i]], $va );
 		}
 		return $nar;
 	}
