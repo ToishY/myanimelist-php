@@ -1,5 +1,5 @@
 # myanimelist-php
-Just an easy to use PHP class for getting anime information from [MyAnimeList](https://myanimelist.net).
+Just an easy to use PHP class for getting anime information from [MyAnimeList](https://myanimelist.net) (without API).
 
 ### How To Use
 Just include it in the PHP file where you want to use it and supply the MyAnimeList ID (from URL)
