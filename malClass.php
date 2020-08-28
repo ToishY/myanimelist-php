@@ -3,7 +3,7 @@ class MyAnimeListHandler{
 	/**
 	* PHP class for getting MyAnimeList anime information
 	* 
-	* @author     ToishY
+	* @author     ToshY
 	* @version    1.0.2
 	*/
 
